@@ -2,12 +2,16 @@ import React, { Component } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default class FormComponent extends Component {
+export class FormComponent extends Component {
   componentDidMount() {
     AOS.init({
       duration: 1000,
     });
   }
+
+  verifyPassword = () => {
+    console.log("hello");
+  };
 
   render() {
     return (
@@ -31,6 +35,7 @@ export default class FormComponent extends Component {
                   id="firstName"
                   className="form-control"
                   placeholder="First Name "
+                  required
                 />
               </div>
               <div className="col">
@@ -40,6 +45,7 @@ export default class FormComponent extends Component {
                   id="lastName"
                   className="form-control"
                   placeholder="Last Name"
+                  required
                 />
               </div>
             </div>
@@ -74,6 +80,7 @@ export default class FormComponent extends Component {
                   id="password"
                   className="form-control"
                   placeholder="Password "
+                  required
                 />
               </div>
               <div className="col">
@@ -83,6 +90,8 @@ export default class FormComponent extends Component {
                   id="confirmPassword"
                   className="form-control"
                   placeholder="Confirm Password "
+                  onChange={this.verifyPassword}
+                  required
                 />
               </div>
             </div>
@@ -93,24 +102,24 @@ export default class FormComponent extends Component {
               <input
                 type="checkbox"
                 name="agreement"
-                class="form-check-input"
+                className="form-check-input"
                 required
               />
               <label
-                for="agreement"
-                class="form-check-label font-ubuntu text-black-50"
+                htmlFor="agreement"
+                className="form-check-label font-ubuntu text-black-50"
               >
                 Accepts
                 <a href> terms, conditiions and policies (*)</a>
               </label>
             </div>
-            <div class="submit-btn text-center my-5">
+            <div className="submit-btn text-center my-5">
               <button
                 type=""
-                class="btn btn-warning rounded-pill text-dark px-5"
+                className="btn btn-warning rounded-pill text-dark px-5"
                 style={{ fontFamily: "quicksand" }}
               >
-                Register  
+                Register
               </button>
             </div>
           </form>

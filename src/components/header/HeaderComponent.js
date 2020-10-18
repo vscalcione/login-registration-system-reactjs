@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default class HeaderComponent extends Component {
+export class HeaderComponent extends Component {
   componentDidMount() {
     AOS.init({
       duration: 1000,

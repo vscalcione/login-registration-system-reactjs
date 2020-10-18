@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 
-import HeaderComponent from "./components/header/HeaderComponent";
-import FormComponent from "./components/form/FormComponent";
-import ProfileImageComponent from "./components/profile-image/ProfileImageComponent";
+import { HeaderComponent } from "./components/header/HeaderComponent";
+import { FormComponent } from "./components/form/FormComponent";
+import { ProfileImageComponent } from "./components/profile-image/ProfileImageComponent";
 
 function App() {
   return (

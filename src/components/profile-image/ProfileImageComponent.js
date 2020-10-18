@@ -5,7 +5,7 @@ import ProfileIcon from "../../assets/profile/profile-icon.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default class ProfileImageComponent extends Component {
+export class ProfileImageComponent extends Component {
   componentDidMount() {
     AOS.init({
       duration: 1000,
