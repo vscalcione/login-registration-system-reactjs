@@ -46,9 +46,9 @@ export default class FormComponent extends Component {
             <div className="form-row my-4">
               <div className="col">
                 <input
-                  type="text"
-                  name="dataNascita"
-                  id="dataNascita"
+                  type="date"
+                  name="birthDate"
+                  id="birthDate"
                   className="form-control"
                   placeholder="Birth Date"
                 />
@@ -110,7 +110,7 @@ export default class FormComponent extends Component {
                 class="btn btn-warning rounded-pill text-dark px-5"
                 style={{ fontFamily: "quicksand" }}
               >
-                Registrati
+                Register  
               </button>
             </div>
           </form>
