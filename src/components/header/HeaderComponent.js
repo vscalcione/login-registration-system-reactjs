@@ -2,7 +2,7 @@ import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { withRouter, useHistory, useLocation } from "react-router-dom";
+import { withRouter, useLocation } from "react-router-dom";
 
 export const HeaderComponent = withRouter(({ history }) => {
   AOS.init();
@@ -31,14 +31,14 @@ export const HeaderComponent = withRouter(({ history }) => {
         <span className="font-ubuntu text-black-50">
           {currentUrl === "/"
             ? "Are you already registered?"
-            : "Are you already not registered?"}
+            : "Not registered yet?"}
           <br />
           <button
             type=""
             className="btn btn-warning rounded-pill text-dark px-4"
             style={{ fontFamily: "quicksand", marginTop: "22px" }}
             onClick={() => {
-              history.push("/login");
+              currentUrl === "/" ? history.push("/login") : history.push("/");
             }}
           >
             {currentUrl === "/" ? "Login" : "Register"}
