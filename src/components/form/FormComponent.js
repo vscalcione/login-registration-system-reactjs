@@ -101,8 +101,7 @@ export const FormComponent = () => {
               htmlFor="agreement"
               className="form-check-label font-ubuntu text-black-50"
             >
-              Accepts
-              <a href> terms, conditiions and policies (*)</a>
+              Accepts terms, conditiions and policies (*)
             </label>
           </div>
           <div className="submit-btn text-center my-5">

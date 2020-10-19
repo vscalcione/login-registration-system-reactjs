@@ -16,13 +16,21 @@ export const HeaderComponent = () => {
           className="login-title text-dark"
           style={{ fontFamily: "quicksand" }}
         >
-          Login/Registration
+          Registration/Login
         </h1>
         <p className="font-ubuntu text-black-50" id="register-p">
           Register and enjoy the additional features
         </p>
         <span className="font-ubuntu text-black-50">
-          Are you already registered? <a href> Log in </a>
+          Are you already registered?
+          <br />
+          <button
+            type=""
+            className="btn btn-warning rounded-pill text-dark px-4"
+            style={{ fontFamily: "quicksand", marginTop: "22px" }}
+          >
+            Login
+          </button>
         </span>
       </div>
     </>

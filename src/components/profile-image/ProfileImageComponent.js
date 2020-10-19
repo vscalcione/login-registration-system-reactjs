@@ -10,6 +10,22 @@ export const ProfileImageComponent = () => {
     duration: 1000,
   });
 
+  const changeProfilePicture = () => {
+    let uploadFile = document.querySelector(
+      '#register .upload-profile-image input[type="file"]'
+    );
+    if (uploadFile.files && uploadFile.files[0]) {
+      let reader = new FileReader();
+      reader.onload = (e) => {
+        document
+          .querySelector("#register .upload-profile-image .img")
+          .setAttribute("src", e.target.result);
+      };
+      reader.readAsDataURL(uploadFile.files[0]);
+      
+    }
+  };
+
   return (
     <>
       <div className="upload-profile-image d-flex justify-content-center pb-5">
@@ -35,6 +51,7 @@ export const ProfileImageComponent = () => {
             className="form-control-file"
             name="profileUpload"
             id="upload-profile"
+            onChange={changeProfilePicture}
           />
         </div>
       </div>
