@@ -4,6 +4,7 @@ import ProfileIcon from "../../assets/profile/profile-icon.png";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import swal from "sweetalert";
 
 export const ProfileImageComponent = () => {
   AOS.init({
@@ -22,7 +23,12 @@ export const ProfileImageComponent = () => {
           .setAttribute("src", e.target.result);
       };
       reader.readAsDataURL(uploadFile.files[0]);
-      
+      swal({
+        title: "Good job!",
+        text: "You have changed your profile picture!",
+        icon: "success",
+        
+      });
     }
   };
 
