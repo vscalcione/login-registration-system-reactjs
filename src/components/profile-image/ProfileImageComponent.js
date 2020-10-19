@@ -27,7 +27,6 @@ export const ProfileImageComponent = () => {
         title: "Good job!",
         text: "You have changed your profile picture!",
         icon: "success",
-        
       });
     }
   };
